@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+data_file_path = File.join(Gem.datadir("gemdatadir_bug"), "somedata")
+if File.exists?(data_file_path) and File.read(data_file_path) == "hello"
+	puts "PASS"
+else
+	puts "FAIL"
+end
